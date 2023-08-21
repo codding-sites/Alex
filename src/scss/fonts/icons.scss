@@ -1,0 +1,70 @@
+%ic {
+	font-family: "icons";
+	src: url('@fonts/icons.eot?a0e7cj');
+	src: url('@fonts/icons.ttf?a0e7cj') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-logo:before {
+	content: "\e90a";
+}
+
+._icon-application:before {
+	content: "\e900";
+}
+
+._icon-arrow-left:before {
+	content: "\e901";
+}
+
+._icon-crown:before {
+	content: "\e902";
+}
+
+._icon-e-mail:before {
+	content: "\e903";
+}
+
+._icon-geo:before {
+	content: "\e904";
+}
+
+._icon-git-hub:before {
+	content: "\e905";
+}
+
+._icon-inst:before {
+	content: "\e906";
+}
+
+._icon-internet:before {
+	content: "\e907";
+}
+
+._icon-link:before {
+	content: "\e908";
+}
+
+._icon-linkedin:before {
+	content: "\e909";
+}
+
+._icon-phone:before {
+	content: "\e90b";
+}
+
+._icon-twitter:before {
+	content: "\e90c";
+}

@@ -1,0 +1,176 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.page {
+   &__main {
+   }
+
+   &__services {
+   }
+
+   &__portfolio {
+   }
+
+   // .page__carrer
+   &__carrer {
+   }
+
+   // .page__blog
+   &__blog {
+   }
+
+   // .page__reviews
+   &__reviews {
+   }
+
+   // .page__skills
+   &__skills {
+   }
+
+   // .page__feedback
+   &__feedback {
+   }
+
+   &__bottom {
+   }
+}
+//========================================================================================================================================================
+.title {
+
+   &>*:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 8, 5);
+   }
+   &_b {
+      &>*:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 16, 10);
+      }
+   }
+   &_c {
+      justify-self: center;
+   }
+
+   &__suptitle {
+      opacity: 0;
+      transform: translate(0, rem(50));
+      transition: all 0.3s ease 0.3s;
+      .previous-section & {
+         transform: translate(0, rem(-50));
+         transition: all 0.8s ease 0.3s;
+      }
+      .active-section & {
+         opacity: 1;
+         transform: translate(0, rem(0));
+         transition: all 0.8s ease 0.4s;
+      }
+      padding-left: rem(32);
+      position: relative;
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: math.div(24, 14);
+      letter-spacing: rem(7.5);
+      text-transform: uppercase;
+      &::before{
+         content:'';
+         position: absolute;
+         display: block;
+         width: rem(16);
+         height: rem(2);
+         top: 50%;
+         left: 0;
+         transform: translate(0, -50%);
+         background-color: #D9D9D9;
+      }
+   }
+
+   &__title {
+      opacity: 0;
+      transform: translate(0, rem(50));
+      transition: all 0.3s ease 0.3s;
+      .previous-section & {
+         transform: translate(0, rem(-50));
+         transition: all 0.8s ease 0.4s;
+      }
+      .active-section & {
+         opacity: 1;
+         transform: translate(0, rem(0));
+         transition: all 0.8s ease 0.3s;
+      }
+      @include adaptiveValue("font-size", 36, 28);
+      line-height: math.div(45, 30);
+      font-weight: 700;
+      color: $mainColorTwo;
+      span {
+         color: $purpleColor;
+      }
+      &_b {
+         @include adaptiveValue("font-size", 44, 38);
+         line-height: math.div(55, 44);
+      }
+   }
+}
+//========================================================================================================================================================
+.text {
+   color: $mainColorTwo;
+   &>*:not(:last-child) {
+      margin-bottom: rem(15);
+   }
+}
+//========================================================================================================================================================
+.social {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+
+   &>*:not(:last-child) {
+      @include adaptiveValue("margin-right", 32, 15);
+   }
+
+   &__item {}
+
+   &__link {
+      font-size: rem(24);
+      color: $mainColorTwo;
+      transition: all 0.2s ease 0s;
+      &_gray {
+         color: $mainColor;
+      }
+
+      &:hover {
+         color: $purpleColor;
+      }
+   }
+}
+//========================================================================================================================================================
+.category-link {
+   padding: rem(4) rem(8);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   position: relative;
+   font-size: rem(12);
+   font-weight: 500;
+   line-height: math.div(15, 12);
+   border: rem(1) solid #fff;
+   background-color: #fff;
+   transition: all 0.3s ease 0s;
+   border-radius: rem(5);
+
+   &:hover {
+      color: #fff;
+      background-color: $purpleColor;
+   }
+}
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
